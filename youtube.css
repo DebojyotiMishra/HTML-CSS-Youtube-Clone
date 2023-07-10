@@ -111,6 +111,10 @@ body {
     position: relative;
 }
 
+.bell-icon {
+    padding-top: 3px;
+}
+
 .notification-count {
     position: absolute;
     top: -4px;
