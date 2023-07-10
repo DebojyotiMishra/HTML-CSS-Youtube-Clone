@@ -1,0 +1,255 @@
+body {
+    background-color: rgb(247, 247, 247);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-top: 75px;
+    padding-left: 170px;
+    padding-right: 20px;
+    padding-bottom: 100px;
+}
+
+.global-nav {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-bottom: #ececec 1px solid;
+    z-index: 10;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+}
+
+/* global nav left */
+.globalnav-left {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-shrink: 0;
+}
+
+/* search bar */
+.searchbar {
+    display: flex;
+    width: 361px;
+    padding: 7px 10px;
+    align-items: center;
+    gap: 6px;
+    border-radius: 10px;
+    background: rgba(118, 118, 128, 0.12);
+}
+
+.magnifying-glass-icon-wrapper {
+    height: 15.77px;
+}
+
+.magnifying-glass {
+    width: 15.63px;
+    height: 15.78px;
+    flex-shrink: 0;
+    fill: rgba(60, 60, 67, 0.60);
+    cursor: pointer;
+}
+
+.search-field {
+    /* layout */
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 0;
+
+    /* typography */
+    color: rgba(60, 60, 67, 0.60);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif!important;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -0.408px;
+}
+
+.input-field {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif!important;
+    background-color: transparent;
+    outline: none;
+    width: 100%;
+    border: 0;
+    line-height: 22px;
+    font-size: 17px;
+    padding: 0px;
+    color: #1d1d1f;
+}
+
+.microphone-icon-wrapper {
+    height: 17.37px;
+}
+
+.microphone {
+    /* layout */
+    width: 11.878px;
+    height: 17.681px;
+    flex-shrink: 0;
+
+    /* style */
+    fill: rgba(60, 60, 67, 0.60);
+    cursor: pointer;
+}
+
+/* global nav right */
+.globalnav-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-shrink: 0;
+}
+
+.bell-icon-wrapper {
+    position: relative;
+}
+
+.notification-count {
+    position: absolute;
+    top: -4px;
+    right: -8px;
+    background-color: #ff0000;
+    font-size: 11px;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 50%;
+}
+
+/* sidebar */
+.sidebar-wrapper {
+    position: fixed;
+    top: 60px;
+    bottom: 0;
+    left: 0;
+    width: 150px;
+
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    font-size: 12px;
+}
+
+.sidebaritem1 {
+    padding-top: 5px;
+}
+
+.sidebar-item {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    height: 55px;
+    width: 120px;
+    padding-left: 30px;
+    transition: background-color 0.18s;
+    cursor: pointer;
+}
+
+.sidebar-item:hover {
+    background-color: rgb(233, 233, 233);
+}
+
+.subscriptions-button {
+    margin-left: -5px;
+}
+
+/* video grid */
+.thumbnail {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.video-info-grid {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+}
+
+.channel-picture {
+    border-radius: 50%;
+    height: 36px;
+    margin-top: 12px;
+    margin-right: 12px;
+}
+
+.pfp {
+    vertical-align: top;
+}
+
+.video-title {
+    margin-top: 12px;
+    margin-bottom: 0px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.video-author {
+    color: rgb(96, 96, 96);
+    margin-top: 4px;
+    margin-bottom: 0px;
+    font-size: 14px;
+}
+
+.video-stats {
+    color: rgb(96, 96, 96);
+    margin-top: 2px;
+    margin-bottom: 0px;
+    font-size: 14px;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 15px;
+    row-gap: 38px;
+}
+
+@media (max-width: 1400px) {
+    .video-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 1070px) {
+    .video-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 790px) {
+    .searchbar {
+        width: auto;
+    }
+}
+
+@media (max-width: 750px) {
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.thumbnail-row {
+    position: relative;
+}
+
+.video-time {
+    background-color: #1f1f21;
+    color: rgb(248, 248, 248);
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 2px 5px;
+
+    position: absolute;
+    bottom: 13px;
+    right: 10px;
+}
